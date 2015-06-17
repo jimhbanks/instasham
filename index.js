@@ -2,6 +2,7 @@ var express = require('express'); // Use the express library.
 var app = express(); // Create our app. 
 var http = require('http');
 var Instagram = require('instagram-node-lib');
+var bodyParser = require('body-parser')
 server = http.createServer(app);
 port = process.env.PORT || 3000;
 

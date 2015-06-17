@@ -37,12 +37,16 @@ app.get('/subscribe', function(request, response){
   Instagram.subscriptions.handshake(request, response); 
 });
 
-Instagram.subscriptions.list();
-    [ { object: 'tag',
-          object_id: 'blue',
-          aspect: 'media',
-          callback_url: 'http://http://9e4a9293.ngrok.io/',
-          type: 'subscription',
-          id: '#' },]
 
+
+Instagram.subscriptions.subscribe({ 
+        object: 'tag',
+        object_id: 'blue',
+        aspect: 'media',
+        callback_url: 'http://9e4a9293.ngrok.io/subscribe',
+        type: 'subscription',
+        id: '#'
+});
+
+app.use(bodyParser.json());
 
